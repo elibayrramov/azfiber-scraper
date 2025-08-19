@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update       && apt-get install -y --no-install-recommends          wget ca-certificates unzip          chromium chromium-driver          tesseract-ocr          libnss3 libx11-6 libxss1 libasound2 libatk1.0-0 libcups2 libgtk-3-0 fonts-liberation       && rm -rf /var/lib/apt/lists/*
