@@ -14,12 +14,12 @@ import os
 import traceback
 
 # === CONFIG - adjust if needed ===
-CHROME_DRIVER_PATH = r"C:\Users\Eli\OneDrive\Masaüstü\chromedriver.exe"
-TESSERACT_PATH = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+CHROME_DRIVER_PATH = r"C:\\Users\\Eli\\OneDrive\\Masaüstü\\chromedriver.exe"
+TESSERACT_PATH = r"C:\\Program Files\Tesseract-OCR\\tesseract.exe"
 LOGIN_URL = "https://customer.azfiber.net/index.php?module=index"
 USERNAME = "ali"
 PASSWORD = "Welcome2024!"
-MAX_ATTEMPTS = 5
+MAX_ATTEMPTS = 8
 # ================================
 
 pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
@@ -141,7 +141,7 @@ def scrape_customers():
     options.add_argument('--disable-dev-shm-usage')
 
     service = Service(chrome_driver_path)
-    driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Chrome(options=options)
 
     success = False
     try:
